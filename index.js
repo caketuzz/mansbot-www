@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
   res.sendFile('index.html', { root: publicRoot });
 });
 
+app.get('/alexa', (req, res) => {
+  res.sendFile('/alexa/index.js', { root: publicRoot });
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
